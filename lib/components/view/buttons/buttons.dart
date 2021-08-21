@@ -1,6 +1,8 @@
-import 'package:calculator/components/view/back_button.dart';
-import 'package:calculator/components/view/button.dart';
-import 'package:calculator/components/view/number_button.dart';
+import 'package:calculator/components/view/buttons/back_button.dart';
+import 'package:calculator/components/view/buttons/button.dart';
+import 'package:calculator/components/view/buttons/change_to_extended_mode_button.dart';
+import 'package:calculator/components/view/buttons/change_to_standart_mode_button.dart';
+import 'package:calculator/components/view/buttons/number_button.dart';
 import 'package:flutter/material.dart';
 
 class Buttons extends StatelessWidget {
@@ -30,6 +32,14 @@ class Buttons extends StatelessWidget {
 
     _list.add(
       EraseButton()
+    );
+
+    _list.add(
+      ChangeToExtendedModeButton()
+    );
+
+    _list.add(
+        ChangeToStandardModeButton()
     );
 
     return _list;

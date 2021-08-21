@@ -8,11 +8,16 @@ abstract class CalculatorButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onTap,
+      onLongPress: onLongPress,
       child: buildButtonBody(context)
     );
   }
 
   void onTap();
+
+  void onLongPress() {
+
+  }
 
   Widget buildButtonBody(BuildContext context);
 }
