@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 extension StringCutting on String {
   String removeLast() {
     if (this.length > 0) {
