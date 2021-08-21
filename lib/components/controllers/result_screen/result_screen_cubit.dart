@@ -21,15 +21,20 @@ class ResultScreenCubit extends Cubit<ResultScreenState> {
 
   void eraseLastSymbol() {
     _text = _text.removeLast();
-    emitState(
-        type: ResultScreenStateType.LOADED,
-        text: _text
-    );
+    reload();
   }
 
   void addSymbol(String symbol) {
     _text += symbol;
+    reload();
+  }
 
+  void clearScreen() {
+    _text = '';
+    reload();
+  }
+
+  void reload() {
     emitState(
         type: ResultScreenStateType.LOADED,
         text: _text

@@ -5,15 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ResultScreen extends StatelessWidget {
-  late double _width;
+  late final double _width;
   final Color _backgroundColor = Colors.grey;
+  final AppMode _appSettings = AppSettings().currentMode;
 
   @override
   Widget build(BuildContext context) {
     _width = MediaQuery.of(context).size.width;
-
-    ResultScreenCubit _cubit = BlocProvider
-        .of<ResultScreenCubit>(context);
 
     return BlocBuilder<ResultScreenCubit, ResultScreenState>(
         builder: (context, state) {
@@ -29,7 +27,7 @@ class ResultScreen extends StatelessWidget {
               child: Text(
                 state.text,
                 style: TextStyle(
-                    fontSize: AppSettings().resultScreenFontSize
+                    fontSize: _appSettings.resultScreenFontSize
                 ),
               ),
             ),
