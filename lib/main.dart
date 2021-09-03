@@ -1,7 +1,9 @@
+import 'package:calculator/injectable.dart';
 import 'package:flutter/material.dart';
 import 'package:calculator/components/view/calculator.dart';
 
 void main() {
+  configureDependencies(Env.DEV);
   runApp(MyApp());
 }
 

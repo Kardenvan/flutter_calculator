@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 
+@singleton
 class AppSettings {
   static final AppSettings _appSettings = AppSettings._();
 
@@ -40,6 +42,8 @@ abstract class AppMode {
   Color get operationButtonIconColor => _operationButtonIconColor;
 }
 
+@Named("Standard")
+@Injectable(as: AppMode)
 class StandardMode extends AppMode {
   const StandardMode();
 
@@ -53,6 +57,8 @@ class StandardMode extends AppMode {
   final Color _operationButtonIconColor = Colors.orange;
 }
 
+@Named("Extended")
+@Injectable(as: AppMode)
 class ExtendedMode extends AppMode {
   const ExtendedMode();
 
