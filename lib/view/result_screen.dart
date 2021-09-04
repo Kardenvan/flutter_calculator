@@ -1,5 +1,6 @@
-import 'package:calculator/components/controllers/result_screen/result_screen_cubit.dart';
-import 'package:calculator/components/controllers/result_screen/result_screen_state.dart';
+import 'package:calculator/controllers/result_screen/result_screen_cubit.dart';
+import 'package:calculator/controllers/result_screen/result_screen_state.dart';
+import 'package:calculator/injectable.dart';
 import 'package:calculator/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class ResultScreen extends StatelessWidget {
   late final double _width;
   final Color _backgroundColor = Colors.grey;
-  final AppMode _appSettings = AppSettings().currentMode;
+  final AppSettings _appSettings = getIt<AppSettings>();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,8 @@ class ResultScreen extends StatelessWidget {
               child: Text(
                 state.text,
                 style: TextStyle(
-                    fontSize: _appSettings.resultScreenFontSize
+                  fontSize: _appSettings.currentMode.resultScreenFontSize,
+                  color: _appSettings.currentMode.resultScreenTextColor
                 ),
               ),
             ),

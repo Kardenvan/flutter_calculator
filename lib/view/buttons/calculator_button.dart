@@ -1,9 +1,13 @@
+import 'package:calculator/injectable.dart';
+import 'package:calculator/settings.dart';
 import 'package:flutter/material.dart';
 
 abstract class CalculatorButton extends StatelessWidget {
-  const CalculatorButton({
+  CalculatorButton({
     Key? key
   }) : super(key: key);
+
+  final AppSettings appSettings = getIt<AppSettings>();
 
   Widget build(BuildContext context) {
     return TextButton(

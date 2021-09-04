@@ -1,9 +1,9 @@
-import 'package:calculator/components/controllers/app/app_cubit.dart';
-import 'package:calculator/components/controllers/app/app_state.dart';
-import 'package:calculator/components/controllers/result_screen/result_screen_cubit.dart';
-import 'package:calculator/components/view/buttons/buttons.dart';
+import 'package:calculator/controllers/app/app_cubit.dart';
+import 'package:calculator/controllers/app/app_state.dart';
+import 'package:calculator/controllers/result_screen/result_screen_cubit.dart';
+import 'package:calculator/view/buttons/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:calculator/components/view/result_screen.dart';
+import 'package:calculator/view/result_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyCalculator extends StatelessWidget {

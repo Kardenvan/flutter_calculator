@@ -1,4 +1,4 @@
-import 'package:calculator/components/controllers/result_screen/result_screen_state.dart';
+import 'package:calculator/controllers/result_screen/result_screen_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:calculator/extensions/string_extension.dart';
 

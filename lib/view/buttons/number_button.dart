@@ -1,5 +1,5 @@
-import 'package:calculator/components/controllers/result_screen/result_screen_cubit.dart';
-import 'package:calculator/components/view/buttons/button.dart';
+import 'package:calculator/controllers/result_screen/result_screen_cubit.dart';
+import 'package:calculator/view/buttons/calculator_button.dart';
 import 'package:calculator/settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

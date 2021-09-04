@@ -31,6 +31,7 @@ abstract class AppMode {
   abstract final Color _buttonColor;
   abstract final Color _numberButtonTextColor;
   abstract final Color _operationButtonIconColor;
+  abstract final Color _resultScreenTextColor;
 
   double get primaryFontSize => _primaryFontSize;
   double get buttonFontSize => _buttonFontSize;
@@ -40,6 +41,7 @@ abstract class AppMode {
   Color get buttonColor => _buttonColor;
   Color get numberButtonTextColor => _numberButtonTextColor;
   Color get operationButtonIconColor => _operationButtonIconColor;
+  Color get resultScreenTextColor => _resultScreenTextColor;
 }
 
 @Named("Standard")
@@ -55,6 +57,7 @@ class StandardMode extends AppMode {
   final Color _buttonColor = Colors.grey;
   final Color _numberButtonTextColor = Colors.black;
   final Color _operationButtonIconColor = Colors.orange;
+  final Color _resultScreenTextColor = Colors.black;
 }
 
 @Named("Extended")
@@ -70,6 +73,7 @@ class ExtendedMode extends AppMode {
   final Color _buttonColor = Colors.pinkAccent;
   final Color _numberButtonTextColor = Colors.white;
   final Color _operationButtonIconColor = Colors.green;
+  final Color _resultScreenTextColor = Colors.white;
 }
 
 class AppModes {

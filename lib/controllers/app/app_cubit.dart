@@ -1,4 +1,4 @@
-import 'package:calculator/components/controllers/app/app_state.dart';
+import 'package:calculator/controllers/app/app_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppCubit extends Cubit<AppState> {

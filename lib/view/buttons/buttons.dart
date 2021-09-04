@@ -1,8 +1,8 @@
-import 'package:calculator/components/view/buttons/back_button.dart';
-import 'package:calculator/components/view/buttons/button.dart';
-import 'package:calculator/components/view/buttons/change_to_extended_mode_button.dart';
-import 'package:calculator/components/view/buttons/change_to_standart_mode_button.dart';
-import 'package:calculator/components/view/buttons/number_button.dart';
+import 'package:calculator/view/buttons/back_button.dart';
+import 'package:calculator/view/buttons/calculator_button.dart';
+import 'package:calculator/view/buttons/change_to_extended_mode_button.dart';
+import 'package:calculator/view/buttons/change_to_standart_mode_button.dart';
+import 'package:calculator/view/buttons/number_button.dart';
 import 'package:flutter/material.dart';
 
 class Buttons extends StatelessWidget {
